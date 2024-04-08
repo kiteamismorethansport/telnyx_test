@@ -30,9 +30,7 @@ class SignUpPage {
           confirmUserData(){
             this.elements.signUpBtn().click()
           }
-         checkResultRegistration() {
-         cy.get('.c-buvHyO-ijVfhdt-css > .c-PJLV').should('include.text', 'please confirm your email')
-            }
+         
 
 
 

@@ -9,7 +9,7 @@ describe('Login funcionality test', () => {
     login.fillNoEmail()
     login.checkForEmptyEmail()
   })
-  it('login to the website with empty email', () => {
+  it('login to the website with empty password', () => {
     const login = new LoginPage()
     login.fillNoPassword()
     login.checkForEmptyPassword()

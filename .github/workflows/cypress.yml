@@ -8,11 +8,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Cypress run
         uses: cypress-io/github-action@v2
-        with:
-         # start: npm start
-          wait-on: 'http://localhost:3000'
-          record: true
-          config-file: cypress.config.js # Or your custom config file name
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

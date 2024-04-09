@@ -1,7 +1,7 @@
 
 =======
 # Telnyx.com tests  
-The set of e2e tests for the telnyx.com website written on Cypress js framework. It consists of 11 functional tests that include: login tests, registration tests, search tests, shop tests.  
+The set of e2e tests for the telnyx.com website written on Cypress js framework. It consists of 12 functional tests that include: login tests, registration tests, search tests, shop tests.  
   
 ## Getting Started  
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.  

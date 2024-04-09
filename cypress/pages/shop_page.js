@@ -13,13 +13,28 @@ export class ShopPage {
        searchInputField : () => cy.get('.search__input.field__input'),
        searchResults : () => cy.get('.template-search__results.collection.page-width'),
        clickSearch : () => cy.get('.search__button.field__button'),
-       clearSearchField : () => cy.get('[aria-label="Clear search term"]')
+       clearSearchField : () => cy.get('[aria-label="Clear search term"]'),
+       dropdownCurrencyMenu : () => cy.get('.disclosure__button.localization-form__select.localization-selector.link.link--text.caption-large'),
+       listOfCountries : () => cy.get('#FooterCountryList'),
+       priceAndCurrency : () => cy.get('.price-item.price-item--regular')
     }
         searchItem = {
         a : 'Hoodie',
         b : 'Hat',
         c : 'SIM Card'
     }
+        currencies = {
+            Ukraine : '₴',
+            Germany : '€',
+            USA : '$'
+        }
+            
+            changeCurrency(currency) {
+                this.elements.dropdownCurrencyMenu().click()
+                cy.contains('.localization-form__currency', currency).scrollIntoView().click()
+                this.elements.scrollToItems().scrollIntoView()
+                this.elements.priceAndCurrency().should('contain', currency)
+            }
             
             addToCart(){
                 this.elements.scrollToItems().scrollIntoView()
